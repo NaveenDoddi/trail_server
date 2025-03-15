@@ -136,12 +136,12 @@ app.get('/api/inc-city/:state/:city?/:place', async (req, res) => {
     var inc_city_nearby = []
     try {
       $('div.explore-other-dest div.card').each((index, element) => {
-        const text = $(element).find('h4').text();
+        const name = $(element).find('h4').text();
         const image = $(element).find('img').attr('src');
         const Url = $(element).find('a').attr('href');
 
         inc_city_nearby.push({
-          'text': text,
+          'name': name,
           'image': image,
           'URL': Url
         });
